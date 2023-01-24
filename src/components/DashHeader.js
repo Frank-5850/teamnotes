@@ -5,7 +5,12 @@ import React from "react";
 const DashHeader = () => {
   const content = (
     <header>
-      <h1>Header content</h1>
+      <div>
+        <Link to="/dash">
+          <h1>Header content</h1>
+        </Link>
+        <nav>Nav stuff</nav>
+      </div>
     </header>
   );
   return content;

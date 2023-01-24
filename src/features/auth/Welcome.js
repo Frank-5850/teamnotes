@@ -10,6 +10,12 @@ const Welcome = () => {
     <section>
       <p>{today}</p>
       <h1>Welcome</h1>
+      <p>
+        <Link to="/dash/notes">View team notes</Link>
+      </p>
+      <p>
+        <Link to="/dash/users">View User Settings</Link>
+      </p>
     </section>
   );
   return content;
