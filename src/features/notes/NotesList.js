@@ -6,19 +6,26 @@ const NotesList = () => {
   const {
     data: notes,
     isLoading,
-    IsSuccess,
+    isSuccess,
     isError,
     error,
-  } = useGetNotesQuery();
+  } = useGetNotesQuery(undefined, {
+    pollingInterval: 15000,
+    refetchOnFocus: true,
+    refetchOnMountOrArgChange: true,
+  });
+
   let content;
 
   if (isLoading) content = <p>Loading...</p>;
 
   if (isError) {
+    console.log("hello");
     content = <p>{error?.data?.message}</p>;
   }
 
-  if (IsSuccess) {
+  if (isSuccess) {
+    console.log("success");
     const { ids } = notes;
 
     const tableContent = ids?.length
