@@ -24,7 +24,6 @@ const UsersList = () => {
   }
 
   if (isSuccess) {
-    console.log("users success");
     const { ids } = users;
     const tableContent = ids?.length
       ? ids.map((userId) => <User key={userId} userId={userId} />)

@@ -20,12 +20,10 @@ const NotesList = () => {
   if (isLoading) content = <p>Loading...</p>;
 
   if (isError) {
-    console.log("hello");
     content = <p>{error?.data?.message}</p>;
   }
 
   if (isSuccess) {
-    console.log("success");
     const { ids } = notes;
 
     const tableContent = ids?.length
